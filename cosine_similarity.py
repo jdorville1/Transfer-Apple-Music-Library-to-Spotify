@@ -8,9 +8,7 @@ word = re.compile(r"[\w]+")
 
 def get_cosine(vec1, vec2):
     intersection = set(vec1.keys()) & set(vec2.keys())
-    print(intersection)
     numerator = sum([vec1[x] * vec2[x] for x in intersection])
-    print(numerator)
 
     sum1 = sum([vec1[x] ** 2 for x in list(vec1.keys())])
     sum2 = sum([vec2[x] ** 2 for x in list(vec2.keys())])
@@ -25,16 +23,3 @@ def get_cosine(vec1, vec2):
 def text_to_vector(text):
     words = word.findall(text.lower())
     return Counter(words)
-
-
-text1 = "MC Fioti Future, J Balvin, Stefflon Don &#38; Juan Magán The Magician Remix"
-text2 = "MC Fioti, Future, J Balvin, Stefflon Don, Juan Magán Remix"
-
-vector1 = text_to_vector(text1)
-vector2 = text_to_vector(text2)
-
-cosine = get_cosine(vector1, vector2)
-
-print("Cosine:", cosine)
-
-

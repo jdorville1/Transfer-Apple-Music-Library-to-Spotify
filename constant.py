@@ -18,4 +18,4 @@ OAUTH_TOKEN_PROMPT = "A link will open in your browser. Click \"Get Token\" and 
               "Note that this token will expire in ONE HOUR."
 
 SAVE_TRACK_CALL = 'https://api.spotify.com/v1/me/tracks?ids={}'
-SAVE_TRACK_SCOPE = 'user-library-modify'
+SEARCH_FOR_SONG = 'https://api.spotify.com/v1/search?q={}&type=track&limit=5'

@@ -3,7 +3,7 @@ import re
 from collections import Counter
 
 
-word = re.compile(r"[\w&-]+")
+word = re.compile(r"[\w]+")
 
 
 def get_cosine(vec1, vec2):
@@ -27,8 +27,8 @@ def text_to_vector(text):
     return Counter(words)
 
 
-text1 = "197250 hello"
-text2 = "197251 hello"
+text1 = "MC Fioti Future, J Balvin, Stefflon Don &#38; Juan Magán The Magician Remix"
+text2 = "MC Fioti, Future, J Balvin, Stefflon Don, Juan Magán Remix"
 
 vector1 = text_to_vector(text1)
 vector2 = text_to_vector(text2)

@@ -4,4 +4,4 @@ class ResponseException(Exception):
         self.status_code = status_code
 
     def __str__(self):
-        return self.message + f"Error: {self.status_code} - {self.message}"
+        return f"\n-----Error: {self.status_code} - {self.message}-----"

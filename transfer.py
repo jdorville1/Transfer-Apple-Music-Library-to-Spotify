@@ -6,8 +6,6 @@ import cosine_similarity
 import xml.etree.ElementTree as ET
 import constant
 from time import sleep
-
-# /Users/julian/Documents/GitHub/Transfer-Apple-Music-Library-to-Spotify/Library.xml
 from exceptions import ResponseException
 
 
@@ -23,8 +21,7 @@ class AppleMusicSong:
         self.release_date = ""
 
     def __str__(self):
-        # TODO: Remove
-        return self.name + "\t[" + self.artist + "]\t" + self.album + "\n"
+        return self.name + "\t[" + self.artist + "]\t" + self.album
 
     def __repr__(self):
         return self.__str__()
@@ -91,7 +88,7 @@ class SongTransfer:
             return attr_val.replace("&", "")
         elif attr == 'release_date':  # xml lists times as well. Just grab the dates for Spotify comparison.
             return attr_val.split('T')[0]
-        elif attr == 'album':  # more strings not used in Spotify formats
+        elif attr ==  'album':  # more strings not used in Spotify formats
             attr_val = attr_val.split(' - Single')[0]
             attr_val = attr_val.split('(feat.')[0]
             return attr_val
@@ -104,7 +101,6 @@ class SongTransfer:
         self.generate_songs_not_found_table()
 
     def get_spotify_song(self, song: AppleMusicSong):
-        print(song)
         query = urllib.parse.quote_plus(song.name + " " + song.artist)
         url = constant.SEARCH_FOR_SONG.format(query)
         response = requests.get(
@@ -123,8 +119,8 @@ class SongTransfer:
 
         if most_similar_id == '':
             self._not_found.append(song)
-        else:
-            self.add_song_to_library(most_similar_id)
+        # else:
+        #     self.add_song_to_library(most_similar_id)
 
     def get_spotify_id(self, data, song):
         most_similar_id, most_similar_score = '', 0.0
@@ -164,10 +160,14 @@ class SongTransfer:
         #     raise ResponseException(data['error']['status'], data['error']['message'])
 
     def generate_songs_not_found_table(self):
+        print('\n' * 5)
+        print("The following tracks could not be found on Spotify. Try searching for them within the app: ")
         print('-' * 80)
 
         for song in self._not_found:
-            print(song.name, song.artist, song.album, sep="\n")
+            print("Track: ", song.name)
+            print("Artist(s):", song.artist)
+            print("Album: ", song.album)
             print('-' * 80)
 
     def resolve_conflicts(self):

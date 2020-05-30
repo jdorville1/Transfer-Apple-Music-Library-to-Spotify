@@ -85,10 +85,10 @@ class SongTransfer:
         if attr == 'name':
             return attr_val.replace("feat. ", "").replace("&", "")
         elif attr == 'artist':
-            return attr_val.replace("&", "")
+            return attr_val.replace("&", "")  # this throws off Spotify search function
         elif attr == 'release_date':  # xml lists times as well. Just grab the dates for Spotify comparison.
             return attr_val.split('T')[0]
-        elif attr ==  'album':  # more strings not used in Spotify formats
+        elif attr == 'album':  # more strings not used in Spotify formats
             attr_val = attr_val.split(' - Single')[0]
             attr_val = attr_val.split('(feat.')[0]
             return attr_val
@@ -169,12 +169,6 @@ class SongTransfer:
             print("Artist(s):", song.artist)
             print("Album: ", song.album)
             print('-' * 80)
-
-    def resolve_conflicts(self):
-        pass
-
-    def print_summary(self):
-        pass
 
 
 if __name__ == '__main__':

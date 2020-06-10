@@ -32,6 +32,7 @@ class SpotifyLogin:
         self._token = self.generate_spotify_token()
 
     def generate_spotify_token(self):
+        # have the user enter the spotify token, granting the needed permissions.
         msg = constant.OAUTH_TOKEN_PROMPT
         print(msg)
         sleep(0)
@@ -63,10 +64,13 @@ class SongTransfer:
             sys.exit()
 
     def get_apple_library(self) -> [AppleMusicSong]:
+        # parse the Library.xml file
         tree = self.get_xml_file()
         root = tree.getroot()
         track_list = root.find('dict').find('dict')
         songs = []
+        # if the properties being grabbed match the properties we can compare against in the Spotify API,
+        # then we add the values to the song's instance properties.
         for track_info in range(1, len(track_list), 2):
             song = AppleMusicSong()
             for key in range(0, len(track_list[track_info]), 2):
@@ -119,10 +123,15 @@ class SongTransfer:
 
         if most_similar_id == '':
             self._not_found.append(song)
-        # else:
-        #     self.add_song_to_library(most_similar_id)
+        else:
+            self.add_song_to_library(most_similar_id)
 
     def get_spotify_id(self, data, song):
+        """
+        For the tracks obtained from Spotify API, generates score based on similar title and artist names, calculated
+        by cosine similarity. Then, if the album, as well as track number, song duration, and album release date match
+        across the iTunes Library song and the current song being checked, the score increases.
+        """
         most_similar_id, most_similar_score = '', 0.0
         apple_track_text = song.name + song.album + song.artist
 
@@ -154,10 +163,6 @@ class SongTransfer:
                 "Authorization": "Bearer {}".format(self._spotify_token)
             }
         )
-        # data = response.json()
-        #
-        # if response.status_code != 200:
-        #     raise ResponseException(data['error']['status'], data['error']['message'])
 
     def generate_songs_not_found_table(self):
         print('\n' * 5)

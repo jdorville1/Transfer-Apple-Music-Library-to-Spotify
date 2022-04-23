@@ -176,9 +176,13 @@ class SongTransfer:
             print('-' * 80)
 
 
-if __name__ == '__main__':
+def main():
     st = SongTransfer()
     st.transfer_songs()
+
+if __name__ == '__main__':
+    main()
+
 
 #
 # class TestSuite(unittest.TestCase):

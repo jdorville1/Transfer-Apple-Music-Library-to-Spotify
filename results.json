@@ -1,0 +1,133 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=MC+Fioti%2C+Future%2C+J+Balvin%2C+Stefflon+Don+%26+Juan+Mag%C3%A1n&type=track&market=US&offset=0&limit=5",
+    "items": [
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2W6kbe0nm96COrHzNmfLLd"
+              },
+              "href": "https://api.spotify.com/v1/artists/2W6kbe0nm96COrHzNmfLLd",
+              "id": "2W6kbe0nm96COrHzNmfLLd",
+              "name": "MC Fioti",
+              "type": "artist",
+              "uri": "spotify:artist:2W6kbe0nm96COrHzNmfLLd"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5"
+              },
+              "href": "https://api.spotify.com/v1/artists/1vyhD5VmyZ7KMfW5gqLgo5",
+              "id": "1vyhD5VmyZ7KMfW5gqLgo5",
+              "name": "J Balvin",
+              "type": "artist",
+              "uri": "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ExGrw6XpbtUAJHTLtUXUD"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ExGrw6XpbtUAJHTLtUXUD",
+              "id": "2ExGrw6XpbtUAJHTLtUXUD",
+              "name": "Stefflon Don",
+              "type": "artist",
+              "uri": "spotify:artist:2ExGrw6XpbtUAJHTLtUXUD"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1E6aIrYOcysBusmGfm2Pcm"
+          },
+          "href": "https://api.spotify.com/v1/albums/1E6aIrYOcysBusmGfm2Pcm",
+          "id": "1E6aIrYOcysBusmGfm2Pcm",
+          "images": [
+          ],
+          "name": "Bum Bum Tam Tam",
+          "release_date": "2017-12-15",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:1E6aIrYOcysBusmGfm2Pcm"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2W6kbe0nm96COrHzNmfLLd"
+            },
+            "href": "https://api.spotify.com/v1/artists/2W6kbe0nm96COrHzNmfLLd",
+            "id": "2W6kbe0nm96COrHzNmfLLd",
+            "name": "MC Fioti",
+            "type": "artist",
+            "uri": "spotify:artist:2W6kbe0nm96COrHzNmfLLd"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i"
+            },
+            "href": "https://api.spotify.com/v1/artists/1RyvyyTE3xzB2ZywiAwp0i",
+            "id": "1RyvyyTE3xzB2ZywiAwp0i",
+            "name": "Future",
+            "type": "artist",
+            "uri": "spotify:artist:1RyvyyTE3xzB2ZywiAwp0i"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5"
+            },
+            "href": "https://api.spotify.com/v1/artists/1vyhD5VmyZ7KMfW5gqLgo5",
+            "id": "1vyhD5VmyZ7KMfW5gqLgo5",
+            "name": "J Balvin",
+            "type": "artist",
+            "uri": "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ExGrw6XpbtUAJHTLtUXUD"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ExGrw6XpbtUAJHTLtUXUD",
+            "id": "2ExGrw6XpbtUAJHTLtUXUD",
+            "name": "Stefflon Don",
+            "type": "artist",
+            "uri": "spotify:artist:2ExGrw6XpbtUAJHTLtUXUD"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1ackd5XprZEkH3McKbQD51"
+            },
+            "href": "https://api.spotify.com/v1/artists/1ackd5XprZEkH3McKbQD51",
+            "id": "1ackd5XprZEkH3McKbQD51",
+            "name": "Juan Magán",
+            "type": "artist",
+            "uri": "spotify:artist:1ackd5XprZEkH3McKbQD51"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 213988,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "GBUM71706300"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6k2900NjJeVqZM55G3Danu"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6k2900NjJeVqZM55G3Danu",
+        "id": "6k2900NjJeVqZM55G3Danu",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Bum Bum Tam Tam",
+        "popularity": 70,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6k2900NjJeVqZM55G3Danu"
+      }
+    ],
+    "limit": 5,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 2
+  }
+}

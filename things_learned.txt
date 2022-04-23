@@ -1,0 +1,106 @@
+You need a web server to be able to use the redirect uri features of HTTP requests (used with implicit grants and
+authorization codes).
+
+
+Return complex data vs. multiple HTTP requests:
+Unless you're dealing with poor internet connections, you should do it by making multiple requests,
+though having one big request gives you better efficiency for compressing the response, and avoids the overhead
+of the extra HTTP requests and response headers.
+-----
+
+How to open a webpage in Python:
+import webbrowser
+webbrowser.open(url, new=0, autoraise=True)
+webbrowser.open_new(url)  # new window
+webbrowser.open_new_tab(url)  # new tab
+
+# new=0: url is opened in the same browser window, if possible.
+# new=1: new browser window is opened, if possible.
+# new=2: new browser page (“tab”) is opened, if possible.
+# autoraise: if True, window is raised.
+-----
+json.dumps converts objects and data types from Python to their JSON format (so True would become true and
+None would become "null"
+
+secrets.py module: Used to generate cryptographically strong random numbers suitable for managing passwords, account
+authentication, security tokens, and related secrets.
+
+secrets should be used for security/cryptography...
+default pseudo-random number generator in random module: modelling and simulation.
+
+
+Never could figure out why global in secrets.py wouldn't update even though using import statements correctly in a
+different module.
+
+
+
+hasattr + getattr to check if a class has a property
+hasattr(song, 'artist')
+-> hasattr swallows any exceptions and returns them as false.
+
+
+To unit test:
+if __name__ == '__main__':
+    unittest.main()
+
+
+SYS.EXIT() to exit
+
+Python 3.6 and up:
+f'{song.name} {song.artist}'
+
+
+data = {dict: 1} {'tracks': {'href': 'https://api.spotify.com/v1/search?query=La+Bicicleta+Carlos+Vives+&type=track&offset=0&limit=5', 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7
+ 'tracks' = {dict: 7} {'href': 'https://api.spotify.com/v1/search?query=La+Bicicleta+Carlos+Vives+&type=track&offset=0&limit=5', 'items': [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/alb...
+  'href' = {str} 'https://api.spotify.com/v1/search?query=La+Bicicleta+Carlos+Vives+&type=track&offset=0&limit=5'
+  'items' = {list: 5} [{'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK'}, 'href': 'https://api.spotify.com/v1/albums/57giaIaMyAVCS7jMIaoIgK', 'id': '57giaIaMyAVC...
+   0 = {dict: 17} {'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK'}, 'href': 'https://api.spotify.com/v1/albums/57giaIaMyAVCS7jMIaoIgK', 'id': '57giaIaMyAVCS...
+    'album' = {dict: 13} {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK'}, 'href': 'https://api.spotify.com/v1/albums/57giaIaMyAVCS7jMIaoIgK', 'id': '57giaIaMyAVCS7jMIaoIgK'...
+     'album_type' = {str} 'album'
+     'artists' = {list: 1} [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}]
+     'available_markets' = {list: 79} ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA']
+     'external_urls' = {dict: 1} {'spotify': 'https://open.spotify.com/album/57giaIaMyAVCS7jMIaoIgK'}
+     'href' = {str} 'https://api.spotify.com/v1/albums/57giaIaMyAVCS7jMIaoIgK'
+     'id' = {str} '57giaIaMyAVCS7jMIaoIgK'
+     'images' = {list: 3} [{'height': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273575fb66ec11e54fb68d548a5', 'width': 640}, {'height': 300, 'url': 'https://i.scdn.co/image/ab67616d00001e02575fb66ec11e54fb68d548a5', 'width': 300}, {'height': 64, 'url': 'https://i.scdn.co/image/ab67616d00004851575fb66ec11e54fb68d548a5', 'width': 64}]
+     'name' = {str} 'VIVES'
+     'release_date' = {str} '2017-11-10'
+     'release_date_precision' = {str} 'day'
+     'total_tracks' = {int} 18
+     'type' = {str} 'album'
+     'uri' = {str} 'spotify:album:57giaIaMyAVCS7jMIaoIgK'
+     __len__ = {int} 13
+    'artists' = {list: 2} [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp'}, 'href': 'https://api.spotify.com/v1/artists/0EmeFodog0BfCgMzAIvKQp', 'id': '0EmeFodog0BfCgMzAIvKQp', 'name': 'Shakira', 'type': 'artist', 'uri': 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'}]
+    'available_markets' = {list: 79} ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA']
+    'disc_number' = {int} 1
+    'duration_ms' = {int} 229509
+    'explicit' = {bool} False
+    'external_ids' = {dict: 1} {'isrc': 'USSD11600112'}
+    'external_urls' = {dict: 1} {'spotify': 'https://open.spotify.com/track/0Gx4VrHzS7pZOEAGrmXXBH'}
+    'href' = {str} 'https://api.spotify.com/v1/tracks/0Gx4VrHzS7pZOEAGrmXXBH'
+    'id' = {str} '0Gx4VrHzS7pZOEAGrmXXBH'
+    'is_local' = {bool} False
+    'name' = {str} 'La Bicicleta'
+    'popularity' = {int} 72
+    'preview_url' = {str} 'https://p.scdn.co/mp3-preview/dc69887f73372d6c4acbe345af1f9af73daa7a9b?cid=774b29d4f13844c495f206cafdad9c86'
+    'track_number' = {int} 12
+    'type' = {str} 'track'
+    'uri' = {str} 'spotify:track:0Gx4VrHzS7pZOEAGrmXXBH'
+    __len__ = {int} 17
+   1 = {dict: 17} {'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp'}, 'href': 'https://api.spotify.com/v1/artists/0EmeFodog0BfCgMzAIvKQp', 'id': '0EmeFodog0BfCgMzAIvKQp', 'name': 'Shakira', 'type': 'artist', 'uri': 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/album/6bUxh58rYTL67FS8dyTKMN'}, 'href': 'https://api.spotify.com/v1/albums/6bUxh58rYTL67FS8dyTKMN', 'id': '6bUxh58rYTL67FS8dy...
+   2 = {dict: 17} {'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp'}, 'href': 'https://api.spotify.com/v1/artists/0EmeFodog0BfCgMzAIvKQp', 'id': '0EmeFodog0BfCgMzAIvKQp', 'name': 'Shakira', 'type': 'artist', 'uri': 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', '...
+   3 = {dict: 17} {'album': {'album_type': 'album', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp'}, 'href': 'https://api.spotify.com/v1/artists/0EmeFodog0BfCgMzAIvKQp', 'id': '0EmeFodog0BfCgMzAIvKQp', 'name': 'Shakira', 'type': 'artist', 'uri': 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY', 'QA', 'RO', 'SA', 'SE', 'SG', 'SK', 'SV', 'TH', 'TN', 'TR', 'TW', 'US', 'UY', 'VN', 'ZA'], 'external_urls': {'spotify': 'https://open.spotify.com/album/5EdGgMlsJ7bv8IUqkaaPZN'}, 'href': 'https://api.spotify.com/v1/albums/5EdGgMlsJ7bv8IUqkaaPZN', 'id': '5EdGgMlsJ7bv8IUqka...
+   4 = {dict: 17} {'album': {'album_type': 'single', 'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/4vhNDa5ycK0ST968ek7kRr'}, 'href': 'https://api.spotify.com/v1/artists/4vhNDa5ycK0ST968ek7kRr', 'id': '4vhNDa5ycK0ST968ek7kRr', 'name': 'Carlos Vives', 'type': 'artist', 'uri': 'spotify:artist:4vhNDa5ycK0ST968ek7kRr'}, {'external_urls': {'spotify': 'https://open.spotify.com/artist/0EmeFodog0BfCgMzAIvKQp'}, 'href': 'https://api.spotify.com/v1/artists/0EmeFodog0BfCgMzAIvKQp', 'id': '0EmeFodog0BfCgMzAIvKQp', 'name': 'Shakira', 'type': 'artist', 'uri': 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'}], 'available_markets': ['AD', 'AE', 'AR', 'AT', 'AU', 'BE', 'BG', 'BH', 'BO', 'BR', 'CA', 'CH', 'CL', 'CO', 'CR', 'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP', 'KW', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', '...
+   __len__ = {int} 5
+  'limit' = {int} 5
+  'next' = {str} 'https://api.spotify.com/v1/search?query=La+Bicicleta+Carlos+Vives+&type=track&offset=5&limit=5'
+  'offset' = {int} 0
+  'previous' = {NoneType} None
+  'total' = {int} 20
+  __len__ = {int} 7
+ __len__ = {int} 1
+query = {str} 'La%20Bicicleta%20Carlos%20Vives%20&%20Shakira'
+response = {Response} <Response [200]>
+self = {SongTransfer} <__main__.SongTransfer object at 0x10af5bfd0>
+song = {AppleMusicSong} La Bicicleta\t[Carlos Vives & Shakira]\tVIVES\n
+url = {str} 'https://api.spotify.com/v1/search?q=La%20Bicicleta%20Carlos%20Vives%20&%20Shakira&type=track&limit=5'

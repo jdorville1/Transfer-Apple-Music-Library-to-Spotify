@@ -33,7 +33,7 @@ class SpotifyLogin:
 
     def generate_spotify_token(self):
         # have the user enter the spotify token, granting the needed permissions.
-        print(msg := constant.OAUTH_TOKEN_PROMPT)
+        print(constant.OAUTH_TOKEN_PROMPT)
         sleep(0)
         webbrowser.open("https://developer.spotify.com/console/put-current-user-saved-tracks/", 0, True)
         token = ""
